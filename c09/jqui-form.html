@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 9: APIs - jQuery UI Form Controls</title>
+    <link rel="stylesheet" href="css/c09.css" />
+    <link rel="stylesheet" href="css/pepper-grinder/jquery-ui-1.10.3.custom.min.css" />
+  </head>
+  <body>
+    <header><h1>THE MAKER BUS</h1></header>
+    <h2>Find Accommodation</h2>
+    <div class="third"><img src="img/toys1.jpg" alt="Circuit boards" /></div>
+    <div class="two-thirds">
+      <form>
+        <p id="price">
+        <!-- This is the label and text for the slider -->
+          <label for="amount">Price range:</label>
+          <input type="text" id="amount" />
+        </p>
+        <!-- This div will contain the slider itself -->
+        <div id="price-range"></div>
+        <p>
+        <!-- This is the label for the pop up calendar -->
+          <label for="arrival">Arrival date:</label>
+          <!-- The input is text and ensures the correct date format is used. To turn text input into a date picker, just select it and call datepicker() on it. -->
+          <input type="text" id="arrival" />
+        </p>
+        <input type="submit" value="Find a hotel" />
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/form-init.js"></script>
+  </body>
+</html>
