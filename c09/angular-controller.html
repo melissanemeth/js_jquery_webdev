@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 9: APIs - Angular with a view model / controller</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+    <script src="js/angular-controller.js"></script>
+    <link rel="stylesheet" href="css/c09.css">
+  </head>
+  <body>
+    <header><h1>THE MAKER BUS</h1></header>
+    <h2>Buy tickets</h2>
+    <div class="third"><img src="img/toys1.jpg" alt="Circuit boards" /></div>
+    <div class="two-thirds">
+    <!-- Controller name comes from the function in the js file. There's no database, so the controller also acts as the model (shares data with the view). -->
+      <table ng-controller="BasketCtrl">
+      <!-- Items in curly brackets match the scope properties in the js file. -->
+        <tr><td>Item:</td><td>{{ description }}</td></tr>
+        <tr><td>Cost:</td><td>${{ cost }}</td></tr>
+        <tr><td>Qty:</td><td><input type="number" ng-model="qty"></td></tr>
+        <tr><td>Subtotal:</td><td>{{qty * cost | currency}}</td></tr>
+      </table>
+    </div>
+  </body>
+</html>
